@@ -1,0 +1,3 @@
+package in.ac.rtu.medicare.util;
+import java.time.*; import java.util.regex.Pattern;
+public final class Validation { private static final Pattern EMAIL=Pattern.compile("^[^\\s@]+@[^\\s@]+\\.[^\\s@]+$"); private Validation(){} public static String required(String v,String n){if(v==null||v.trim().isEmpty())throw new IllegalArgumentException(n+" is required");return v.trim();} public static String email(String v){v=required(v,"Email");if(!EMAIL.matcher(v).matches())throw new IllegalArgumentException("Enter a valid email");return v.toLowerCase();} public static void future(LocalDateTime t){if(t==null||!t.isAfter(LocalDateTime.now()))throw new IllegalArgumentException("Appointment must be in the future");} }

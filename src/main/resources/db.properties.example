@@ -1,0 +1,4 @@
+# Copy to db.properties or set MEDICARE_DB_URL, MEDICARE_DB_USER, MEDICARE_DB_PASSWORD.
+db.url=jdbc:mysql://localhost:3306/medicare_hms?useSSL=false&serverTimezone=UTC
+db.user=medicare_app
+db.password=change-me

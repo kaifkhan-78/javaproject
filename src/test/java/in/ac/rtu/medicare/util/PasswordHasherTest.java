@@ -1,0 +1,2 @@
+package in.ac.rtu.medicare.util; import static org.junit.jupiter.api.Assertions.*; import org.junit.jupiter.api.Test;
+class PasswordHasherTest { @Test void hashesAndVerifiesWithoutPlaintext(){String h=PasswordHasher.hash("Demo@123".toCharArray());assertTrue(PasswordHasher.verify("Demo@123".toCharArray(),h));assertFalse(PasswordHasher.verify("wrong".toCharArray(),h));assertFalse(h.contains("Demo@123"));} }
